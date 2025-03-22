@@ -51,7 +51,8 @@ uvicorn app.app:app --reload --port 8081
    Хранит все загруженные в сервис файлы
 - **API (Swagger UI)**: [http://localhost:8081/docs](http://localhost:8081/docs) 
     В силу отсутсвия UI протестировать сервис можно через Swagger, либо через Postman.
-- **API**: [http://localhost:8081](http://localhost:8081) 
+- **API**: [http://localhost:8081](http://localhost:8081)
+    Postman-коллекция: Dracula-Graph.postman_collection.json
 ---
 
 ## **Результат работы**
