@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "15719c8c-104d-4094-96fa-f6ebcb8898f4",
+		"name": "Dracula-Graph",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40968762"
+	},
+	"item": [
+		{
+			"name": "Загрузка файлов в сервис",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Резлуьтат загрузки нескольких файлов",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "files",
+									"type": "file",
+									"src": [
+										"postman-cloud:///1f0070ba-ceb1-4e90-932b-aa12233b9344",
+										"postman-cloud:///1f0070ba-cea3-4430-b508-b5fc7064b712",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 1.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 2.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 3_бд_.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 4_v2.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 5.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 6.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 7.pdf",
+										"/C:/Users/Sapdotten/Desktop/studying/теория графов/Теория графов Лекция 8__.pdf"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8081/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 22 Mar 2025 10:53:34 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "1395"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"uploaded_files\": [\n        {\n            \"filename\": \"tzi.pdf\",\n            \"object_name\": \"b70d87be9985ccd29980b4fe968c08a091cd86024a88ab3f4dea36ed5c438d19\"\n        },\n        {\n            \"filename\": \"сети_и_сетевое_п_1.pdf\",\n            \"object_name\": \"92ad12dab5d088da6fd99ad971a6b4965aab8fb8ce22b5cdb9d1dbd3992ba040\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 1.pdf\",\n            \"object_name\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 2.pdf\",\n            \"object_name\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 3_бд_.pdf\",\n            \"object_name\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 4_v2.pdf\",\n            \"object_name\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 5.pdf\",\n            \"object_name\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 6.pdf\",\n            \"object_name\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 7.pdf\",\n            \"object_name\": \"d5217758b32be5106d4f288bf16f6d077d31cc7ae0f73b60098cc1832b8bdd7f\"\n        },\n        {\n            \"filename\": \"Теория графов Лекция 8__.pdf\",\n            \"object_name\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Запуск сканирования и создание графа",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Пример ответа",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/analyze-and-visualize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"analyze-and-visualize"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sat, 22 Mar 2025 10:55:05 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "accept-ranges",
+							"value": "bytes"
+						},
+						{
+							"key": "content-length",
+							"value": "16029"
+						},
+						{
+							"key": "last-modified",
+							"value": "Sat, 22 Mar 2025 10:55:48 GMT"
+						},
+						{
+							"key": "etag",
+							"value": "\"d90cc95a9b6ef68d5f16100508b9b87e\""
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"utf-8\">\n        <script src=\"lib/bindings/utils.js\"></script>\n        <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css\" integrity=\"sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\" />\n        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js\" integrity=\"sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>\n        <center>\n            <h1></h1>\n        </center>\n        <!-- <link rel=\"stylesheet\" href=\"../node_modules/vis/dist/vis.min.css\" type=\"text/css\" /><script type=\"text/javascript\" src=\"../node_modules/vis/dist/vis.js\"> </script>-->\n        <link\r\n          href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css\"\r\n          rel=\"stylesheet\"\r\n          integrity=\"sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6\"\r\n          crossorigin=\"anonymous\"\r\n        />\n        <script\r\n          src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js\"\r\n          integrity=\"sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf\"\r\n          crossorigin=\"anonymous\"\r\n        ></script>\n        <center>\n            <h1></h1>\n        </center>\n        <style type=\"text/css\">\r\n\r\n             #mynetwork {\r\n                 width: 100%;\r\n                 height: 800px;\r\n                 background-color: #222222;\r\n                 border: 1px solid lightgray;\r\n                 position: relative;\r\n                 float: left;\r\n             }\r\n\r\n             \r\n\r\n             \r\n\r\n             \r\n        </style>\n    </head>\n    <body>\n        <div class=\"card\" style=\"width: 100%\">\n            <div id=\"mynetwork\" class=\"card-body\"></div>\n        </div>\n        <script type=\"text/javascript\">\r\n\r\n              // initialize global variables.\r\n              var edges;\r\n              var nodes;\r\n              var allNodes;\r\n              var allEdges;\r\n              var nodeColors;\r\n              var originalNodes;\r\n              var network;\r\n              var container;\r\n              var options, data;\r\n              var filter = {\r\n                  item : '',\r\n                  property : '',\r\n                  value : []\r\n              };\r\n\r\n              \r\n\r\n              \r\n\r\n              // This method is responsible for drawing the graph, returns the drawn network\r\n              function drawGraph() {\r\n                  var container = document.getElementById('mynetwork');\r\n\r\n                  \r\n\r\n                  // parsing and collecting nodes and edges from the python\r\n                  nodes = new vis.DataSet([{\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"b70d87be9985ccd29980b4fe968c08a091cd86024a88ab3f4dea36ed5c438d19\", \"label\": \"tzi.pdf\", \"shape\": \"dot\", \"title\": \"tzi.pdf\\u003cbr\\u003e[\\u0027\\u0432\\u043e\\u0437\\u043d\\u0438\\u043a\\u043d\\u043e\\u0432\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0430\\u043d\\u043d\\u043e\\u0442\\u0430\\u0446\\u0438\\u044f\\u0027, \\u0027\\u043f\\u0440\\u0435\\u0434\\u043e\\u0442\\u0432\\u0440\\u0430\\u0449\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0438\\u043d\\u0444\\u043e\\u0440\\u043c\\u0430\\u0446\\u0438\\u044f\\u0027, \\u0027\\u0432\\u043e\\u0437\\u0434\\u0435\\u0439\\u0441\\u0442\\u0432\\u0438\\u0435\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"92ad12dab5d088da6fd99ad971a6b4965aab8fb8ce22b5cdb9d1dbd3992ba040\", \"label\": \"\\u0441\\u0435\\u0442\\u0438_\\u0438_\\u0441\\u0435\\u0442\\u0435\\u0432\\u043e\\u0435_\\u043f_1.pdf\", \"shape\": \"dot\", \"title\": \"\\u0441\\u0435\\u0442\\u0438_\\u0438_\\u0441\\u0435\\u0442\\u0435\\u0432\\u043e\\u0435_\\u043f_1.pdf\\u003cbr\\u003e[\\u0027\\u043f\\u0435\\u0440\\u0435\\u0432\\u043e\\u0434\\u0438\\u0442\\u044c\\u0027, \\u0027\\u043f\\u0440\\u043e\\u0442\\u043e\\u043a\\u043e\\u043b\\u0027, \\u0027\\u043f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u043f\\u0440\\u043e\\u0441\\u0438\\u0442\\u044c\\u0027, \\u0027\\u043f\\u043e\\u0434\\u0442\\u0432\\u0435\\u0440\\u0436\\u0434\\u0435\\u043d\\u0438\\u0435\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 1.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 1.pdf\\u003cbr\\u003e[\\u0027\\u043f\\u0441\\u0435\\u0432\\u0434\\u043e\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043f\\u043e\\u0434\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043e\\u0440\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 2.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 2.pdf\\u003cbr\\u003e[\\u0027\\u0442\\u0435\\u043e\\u0440\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0430\\u0027, \\u0027\\u043e\\u043f\\u0435\\u0440\\u0430\\u0446\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 3_\\u0431\\u0434_.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 3_\\u0431\\u0434_.pdf\\u003cbr\\u003e[\\u0027\\u043e\\u043f\\u0440\\u0435\\u0434\\u0435\\u043b\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0442\\u0435\\u043e\\u0440\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u043e\\u0440\\u0433\\u0440\\u0430\\u0444\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 4_v2.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 4_v2.pdf\\u003cbr\\u003e[\\u0027\\u0441\\u043e\\u0441\\u0442\\u043e\\u044f\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0440\\u0430\\u0441\\u0441\\u0442\\u043e\\u044f\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0442\\u0435\\u043e\\u0440\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043e\\u0440\\u0433\\u0440\\u0430\\u0444\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 5.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 5.pdf\\u003cbr\\u003e[\\u0027\\u0441\\u043e\\u0441\\u0442\\u043e\\u044f\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0442\\u0435\\u043e\\u0440\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043e\\u0440\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u0432\\u0435\\u0441\\u043e\\u0432\\u043e\\u0439\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 6.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 6.pdf\\u003cbr\\u003e[\\u0027\\u0440\\u0435\\u0444\\u043b\\u0435\\u043a\\u0441\\u0438\\u0432\\u043d\\u044b\\u0439\\u0027, \\u0027\\u043f\\u043e\\u0434\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u043e\\u0440\\u0433\\u0440\\u0430\\u0444\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"d5217758b32be5106d4f288bf16f6d077d31cc7ae0f73b60098cc1832b8bdd7f\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 7.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 7.pdf\\u003cbr\\u003e[\\u0027\\u043f\\u043e\\u043a\\u0440\\u044b\\u0442\\u0438\\u0435\\u0027, \\u0027\\u043f\\u043e\\u043a\\u0440\\u044b\\u0432\\u0430\\u0442\\u044c\\u0027, \\u0027\\u0432\\u044b\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u043f\\u0440\\u0438\\u043b\\u043e\\u0436\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0438\\u043d\\u0444\\u043e\\u0440\\u043c\\u0430\\u0446\\u0438\\u044f\\u0027]\"}, {\"color\": \"blue\", \"font\": {\"color\": \"white\"}, \"id\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\", \"label\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 8__.pdf\", \"shape\": \"dot\", \"title\": \"\\u0422\\u0435\\u043e\\u0440\\u0438\\u044f \\u0433\\u0440\\u0430\\u0444\\u043e\\u0432 \\u041b\\u0435\\u043a\\u0446\\u0438\\u044f 8__.pdf\\u003cbr\\u003e[\\u0027\\u0441\\u0442\\u043e\\u043a\\u0027, \\u0027\\u0441\\u043e\\u0445\\u0440\\u0430\\u043d\\u0435\\u043d\\u0438\\u0435\\u0027, \\u0027\\u0441\\u0435\\u0442\\u044c\\u0027, \\u0027\\u0442\\u0435\\u043e\\u0440\\u0438\\u044f\\u0027, \\u0027\\u0433\\u0440\\u0430\\u0444\\u0027]\"}]);\r\n                  edges = new vis.DataSet([{\"color\": \"gray\", \"from\": \"b70d87be9985ccd29980b4fe968c08a091cd86024a88ab3f4dea36ed5c438d19\", \"length\": 300, \"to\": \"d5217758b32be5106d4f288bf16f6d077d31cc7ae0f73b60098cc1832b8bdd7f\"}, {\"color\": \"gray\", \"from\": \"92ad12dab5d088da6fd99ad971a6b4965aab8fb8ce22b5cdb9d1dbd3992ba040\", \"length\": 300, \"to\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\"}, {\"color\": \"gray\", \"from\": \"92ad12dab5d088da6fd99ad971a6b4965aab8fb8ce22b5cdb9d1dbd3992ba040\", \"length\": 300, \"to\": \"d5217758b32be5106d4f288bf16f6d077d31cc7ae0f73b60098cc1832b8bdd7f\"}, {\"color\": \"gray\", \"from\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"length\": 300, \"to\": \"d5217758b32be5106d4f288bf16f6d077d31cc7ae0f73b60098cc1832b8bdd7f\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\"}, {\"color\": \"gray\", \"from\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"length\": 300, \"to\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\"}, {\"color\": \"gray\", \"from\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"length\": 300, \"to\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\"}, {\"color\": \"gray\", \"from\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"length\": 300, \"to\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"}, {\"color\": \"gray\", \"from\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\", \"length\": 300, \"to\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\"}, {\"color\": \"gray\", \"from\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\", \"length\": 300, \"to\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"}, {\"color\": \"gray\", \"from\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\", \"length\": 300, \"to\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\"}, {\"color\": \"gray\", \"from\": \"bcfe7c8629432bae4dd2dbb39eae01cc42caf7362741447681e3e343e485f574\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}, {\"color\": \"gray\", \"from\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"length\": 300, \"to\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\"}, {\"color\": \"gray\", \"from\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"length\": 300, \"to\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\"}, {\"color\": \"gray\", \"from\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"length\": 300, \"to\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\"}, {\"color\": \"gray\", \"from\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"length\": 300, \"to\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\"}, {\"color\": \"gray\", \"from\": \"721fcc3d38f9773211f97fb48a7af30e2fbf742ae4c30537a7c4d29edffdcb0a\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}, {\"color\": \"gray\", \"from\": \"fbf183378b57571d86a52e780d8bd98b0348ab69e7362886c31e96b1de928875\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}, {\"color\": \"gray\", \"from\": \"5949350beaa26c2ff4354490f0431c3e2c1d42e20f356030cb2c7edfd48c9d7e\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}, {\"color\": \"gray\", \"from\": \"5ea690d1e87b60c0bb0e018e93045510c35da96bff658ad635e48a441abaf72f\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}, {\"color\": \"gray\", \"from\": \"bb72f11a9fffa264d4a7b2acdc9d4054481a3dbdd2491cde81f9073c04b18dee\", \"length\": 300, \"to\": \"6f5b086a183041a35bf3c54cbdb37ad835eae2ab463d0fb1714d9c2af720d681\"}]);\r\n\r\n                  nodeColors = {};\r\n                  allNodes = nodes.get({ returnType: \"Object\" });\r\n                  for (nodeId in allNodes) {\r\n                    nodeColors[nodeId] = allNodes[nodeId].color;\r\n                  }\r\n                  allEdges = edges.get({ returnType: \"Object\" });\r\n                  // adding nodes and edges to the graph\r\n                  data = {nodes: nodes, edges: edges};\r\n\r\n                  var options = {\r\n    \"configure\": {\r\n        \"enabled\": false\r\n    },\r\n    \"edges\": {\r\n        \"color\": {\r\n            \"inherit\": true\r\n        },\r\n        \"smooth\": {\r\n            \"enabled\": true,\r\n            \"type\": \"dynamic\"\r\n        }\r\n    },\r\n    \"interaction\": {\r\n        \"dragNodes\": true,\r\n        \"hideEdgesOnDrag\": false,\r\n        \"hideNodesOnDrag\": false\r\n    },\r\n    \"physics\": {\r\n        \"enabled\": true,\r\n        \"forceAtlas2Based\": {\r\n            \"avoidOverlap\": 0,\r\n            \"centralGravity\": 0.01,\r\n            \"damping\": 0.4,\r\n            \"gravitationalConstant\": -100,\r\n            \"springConstant\": 0.03,\r\n            \"springLength\": 200\r\n        },\r\n        \"solver\": \"forceAtlas2Based\",\r\n        \"stabilization\": {\r\n            \"enabled\": true,\r\n            \"fit\": true,\r\n            \"iterations\": 1000,\r\n            \"onlyDynamicEdges\": false,\r\n            \"updateInterval\": 50\r\n        }\r\n    }\r\n};\r\n\r\n                  \r\n\r\n\r\n                  \r\n\r\n                  network = new vis.Network(container, data, options);\r\n\r\n                  \r\n\r\n                  \r\n\r\n                  \r\n\r\n\r\n                  \r\n\r\n                  return network;\r\n\r\n              }\r\n              drawGraph();\r\n        </script>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}
