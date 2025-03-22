@@ -1,0 +1,7 @@
+venv/
+.env
+temp_pdfs/
+__pycache__
+lib/
+metadata.json
+graph.html
